@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=oVDND4kSy9MKjQBtG_IQZfLMKwiMQjvXXrmQ7hCrF8jMdbnDkPwyNR8MpGawUGaDXIp3R8KQDj14pdLtt-vk4XQaGQ3_2QmMNA-Puc23d3nb3IDWC0fed94TPrsu30TH6LZykcH9g-wP7FITsu4Egs7oBIj4cmH3ugWhAcSNBx6o-a2QembnF2KUawlWMtlpMh5C_vOztfxKy1K_UENaHJXswZNUwpZjrMyWgxWB2B2mTfeJV_dB5r5xLW3LE5nnQ6DEtmIzI9IliILvvYo2UQJskgEpWoZ8P15KUEE0WFkLyDqTZJVvuw9nHx42HQdDdNAujfDRhEcgrY2UFx46mniNX72ussnhgaokZgpKvQaIPzi2rosiM-eMj5WV5XntOz59yzVfioyMMvnJHOagiN6ykwyCqo5IARTFVQdmohnY7fJFNQRE8VdiXEsy_8M6Wm5MutehPLmqTUlcfqs1PdD1LMPkgRePvCp0g8lFKVy2-k4yHAjXAJGnZSS1WbLY3KiOFTPQZHSeqgkYSE4hGxHkfi2oMfU9rTQucatqUPUKQiA2dPj3BcEsUwJHyN7surMKm7dJ4H6dT3_OlfaDkNtmVigdCByznz9wclMRshiPlLKep58RJloVEYJfKmK7PkjjOXZR08ljEj60wCX0sLweNTwKXC1iwRv6bejU_HZ8jT5X82GwcRolX0iO8I-yzYpnPaRz4EA_feVKYLaM_URCS0IXfgmsnp4rdmFwjbnuhsZOSHiPX2RQAFZDfzfLYOhSH6NaPIY8CVsv-C13LzTswCeX-UDTraLt8U1VJEuWsmrX6_LOWDZBtk-tWOuX3advgoXQRBBMutyLqtrjztsspAIbXqs0e8bsXoFYYLjrzx8egYvNVy8rs0bDpBdn_mMfKcZpFzxe0vZ8a693-_lGasFCS-L30oClJbDgankDbbujO6Pt7FtUBwzbpi-i5nFX_Cziv1_ORtkV8Vnp8CGgU-ANbOiYgCNWMjj6zBw3B3g5BnFQEhWFXplh3aQGdCdBiZ6hBne2WtK9Js8JiZqzoIK_4TfpJyUr40XD6sV3jln8BKJ7sLq8wC_EB8XS_YCg4trOBZzSvbhjsCQSpzyAcHvfgXn7tfjRJNkqu6M" charset="UTF-8"></script></head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо пользователя попросить ввести температуру в градусах Цельсия,
+преобразовать введенное пользователем значение в соответствующую температуру
+в градусах по Фаренгейту и вывести в alert сообщение с текстом:
+"Цельсий: {C}, Фаренгейт: {F}"
+Где вместо {C} и {F} должны быть подставлены соответствующие значения, которые
+были получены ранее.
+Формула перевода градусов Цельсия в градусы Фаренгейта:
+градусы Фаренгейта = (9 / 5) * градусы Цельсия + 32
+
+Уточнение: пользователь всегда вводит корректное число.
+-->
+<script>
+  "use strict";
+
+  const tCelsius = +prompt('Введите температуру в градусах Цельсия');
+  const tFahrenheit = (9 / 5) * tCelsius + 32;
+  alert(`Цельсий: ${tCelsius}, Фаренгейт: ${tFahrenheit.toFixed(1)}`);
+</script>
+</body>
+</html>
