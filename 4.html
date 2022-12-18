@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=_O4DljokDGhBdD46dNof-h743DjAUnsM_IunmSyLz-htpSb9Dbi7nOWBwd4ZT7tDfYjInAkSFN3lPo0sZe96XTAm4Y9unOrQ3QkFvaZ2z-UWfp9Rrl1HNCPk_spCdNJp6gBJq4jcmZfe2ZThQPcLj1-w58v1zAQg-MGwzYZk8_D_QPlOKgfl2e3HOHpGMF79HCxwY-Hoc0n8hW3-WU547DTEfREbqIBxGTZwCEj2mr3xer_3zx0tSU_xrzIX8C34vUlfTpE8wAP55WB_mc0KH6gdDb8OFpzPgz3407Jrw4o1A1CqWoRgtpPRWQPBTQlWMybJriU3WuRh56WdqnyLNF40wbdTFrI9MEE3zOzE2V-IwXSBMGEp8JdUHEUrAO0tDZbz-GXHyzJ7s6Rmsbq1PYIdpZtS-3E9sj5fv6z0Yyaq7b-xsXNv2tU6dpmgcKYAR2-XUrO9M1H8qQewmM_CaMqBZL-QfYDL-2uNqXHqeReZn87DRLASGm2h7biJOQD6wm4TDGv_N9heppZot9PIATHi7PcmeTj3QwtHX6qcj3YltJwzCSlLfAtIOncEAwlbEWyQaAg8oSkz0Rh4OUPjPwVA6tWlYyzXZR-S71NDPyd4SjN0RjKwuqlfmlN-1arWMjP5j8LEBSEK4w0IK-YtbRITaALo3m1w4eqd0QgOqAJvuUAlC5KC4ucroc11cNKCNaJ2PKt2IPmzlJMDXR19g1jUxrptXZPsDu3auBJ_7tnbqxe5-Ac4_saeP6FaSYWk9Mxl4Ikb9tCcOK4TCm1uqE_jUp5I2tTtEc3Mym33UQHfEmf8ZT4_kSlWadjjoFa9UIY6JlI26D2qYPx2J7lbqkp9k0me2n4yB7nuY0TS3DBzdlwypFoZKHN-CmfskQygObaNKrz4mr6zj0Lx0jN-y0w813gGKb3fXVVQWjB944UEJStKaeYsdCIPhy-zMSqH0uGwi1gdfpGnDIsdEPbk0lBjDJAdfFMNbdHlVg94dxPIopFGqGK4yO9ws_ZBMxBN2xsRm2mD3XxTcysu8KlI63qASlN4uiSk7wfyZwR1OD1Yuigf1KP8ZSBbNeh-TtRzXImA9LewNSKZy0c1KRbqHb2Cux51whzHy3X8k8_WzRE" charset="UTF-8"></script></head>
+<body>
+<!--
+Обязательное задание.
+
+1. Необходимо вывести в консоль массив продуктов в котором есть хоть одна
+фотография используя метод filter. Исходные данные - массив products.
+2. Необходимо отсортировать массив products используя метод sort по цене,
+начиная с самой маленькой, заканчивая самой большой ценой, после чего вывести
+отсортированный массив в консоль.
+-->
+<script>
+  "use strict";
+
+  const products = [
+    {
+      id: 3,
+      price: 127,
+      photos: [
+        "1.jpg",
+        "2.jpg",
+      ],
+    },
+    {
+      id: 5,
+      price: 499,
+      photos: [],
+    },
+    {
+      id: 10,
+      price: 26,
+      photos: [
+        "3.jpg",
+      ],
+    },
+    {
+      id: 8,
+      price: 78,
+    },
+  ];
+
+  console.log(products.filter(
+    product => "photos" in product && product.photos.length !== 0
+  ));
+
+  products.sort((product1, product2) => product1.price - product2.price);
+  console.log(products);
+
+</script>
+</body>
+</html>
