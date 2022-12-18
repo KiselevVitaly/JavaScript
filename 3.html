@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=APDzadVwGYpi5_SaDSl27JgOeXBnKaJ7yPnWFqiLqRUYEuzduQ0HOam-iaiCa2iv4RBYIzs9x12HOeQ4H6ys8BlRko7pGD5A17wN2ZQMqEINlUj60ueJj7zOkrCm_XnH-OWV8lkuveg5BWMlYDvpA7kLXNR4hjmy9l_eKCUP131uS_gI5AuyswYWcYMYbuzsGZV71bGl0q_CFiE49yZaDurmNyJwnULBnvZUd1C5MSaZRWWXCXNbgTdB-FiSLELUNmn5V681VBcb21kXJqswigbT5NRCCQgOM5XZXIr5mJCKzEzQfvwb1kvmyiafKT9NnXf5kpZT5biO5VIU3R_oGOz07EH9O67kKV3UduEJm88O4-FiuZ-OTG4onV30j_JRVxike-Fkxj8cBBbq7lFwUJVy1ANGpHOYtrDDsxz27oaLd6Gsga-ohDxhxlwdI9I3fHB8umMHcBQ9Fy5Ofjzrlws99xb-kSdFZ9khN326_zYTrdQY0DOHcNO7O2r2sPyDbezfJuRHbAs6Y1F1dG00oFGikE3iub7kpD0_Yo2qIHPKL-TGvpmTvFrTgx-GSDfuZ4-5p50tmjFeIHVgLg66jawTKoL8so8Hdw5Q62Ayml0DM9gt3i4oUUQ4s32M3aW7_FWxZWP5W7P26tAKoVwNaOER_thh_72CjptJDjdqT9ERav5Ad9kPlWIJ0nQs07z8x0d-Ky2BmKXANUYo0zPsjJUEtkuwWqD5jZpTJEhi-RgACRvE8ilOr00NUNkFTo_cNX3Yj9h7ZuhPi-YjChHdyrHXbqA_rsXgQDJDm3QmSUeUbMjLc3sXCRS5Vf5peHcMwV4CUd3mmJEp2Wi4wdrSo6Ls30dOzbXGU3sE-yQCWEWlHURprses8kZ7Bc_-1zfCMGlWjDX4MAg1Dmr-DxbxykhCoCUJrfl6NNMkGeiDC7qhQGheCxjJpTDT-CrQFkM1_Pyola48YB7cwKXq_g5cKjcEf0XhvxeCTnMTs2JGOJ1HCFCSdX3pnggxQB292Vc-GqAaLBV9JH5k6CO_CnavCEoG2szc-VYWDZe-vHdIpbiCOUt-sXCVVxDinPsAHPu2iP5194FRYCgXp1vybNa3Qo7qAg4G4Ra_rHmGUAf24V4" charset="UTF-8"></script></head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо вывести в консоль значения выражений:
+10 + 10 + "10"
+10 + "10" + 10
+10 + 10 + +"10"
+10 / -""
+10 / +"2,5"
+В этих выражениях нет опечаток, вам их нужно скопировать и вывести в консоль.
+
+Над каждым выводом в консоль необходимо объяснить почему мы получаем такой
+результат.
+
+Объяснения пишите в таком формате:
+/*
+1. 4 умножаем на 2 получаем 8.
+2. 3 минус 8 получаем -5.
+3. С помощью console.log выводим число -5 в консоль.
+*/
+console.log(3 - 4 * 2);
+-->
+<script>
+  "use strict";
+
+  /*
+  1. 10 + 10, получаем 20
+  2. 20 + "10", сложить просто так не получится, так как типы данных разные -
+    число и строка. JavaScript автоматически приведет число 20 в строку "20",
+    после чего произойдет конкатенация: "20" + "10" в результате получим "2010"
+  3. С помощью console.log выводим строку "2010" в консоль
+   */
+  console.log(10 + 10 + "10"); // "2010"
+
+  /*
+  1. 10 + "10", сложить просто так не получится, так как типы данных разные -
+    число и строка. JavaScript автоматически приведет число 10 в строку "10",
+    после чего произойдет конкатенация: "10" + "10" в результате получим "1010"
+  2. "1010" + 10, сложить просто так не получится, так как типы данных разные -
+    строка и число. JavaScript автоматически приведет число 10 в строку "10",
+    после чего произойдет конкатенация: "1010" + "10" в результате получим
+    "101010"
+  3. С помощью console.log выводим строку "101010" в консоль
+   */
+  console.log(10 + "10" + 10); // "101010"
+
+  /*
+  1. 10 + 10, получаем 20
+  2. Перед следующим сложением сработает унарный оператор +"10", который
+    превратит строку "10" в число 10
+  3. 20 + 10, получаем 30
+  4. С помощью console.log выводим число 30 в консоль
+   */
+  console.log(10 + 10 + +"10"); // 30
+
+  /*
+  1. Перед делением сработает унарный оператор -"", который превратит пустую
+    строку "" в число -0.
+  2. 10 / -0, получаем -Infinity
+  3. С помощью console.log выводим число -Infinity в консоль
+   */
+  console.log(10 / -""); // -Infinity
+
+  /*
+  1. Перед делением сработает унарный оператор +"2,5", который попытается
+    превратить строку "2,5" в число. Однако, в JavaScript разделителем дробной
+    части в числе является точка, а не занятая, как в данном примере, из-за
+    этого JavaScript не сможет превратить данную строку в число, мы получим
+    значение NaN
+  2. 10 / NaN, получаем NaN
+  3. С помощью console.log выводим число NaN в консоль
+   */
+  console.log(10 / +"2,5"); // NaN
+
+  /*
+  П.С. обратите внимание что Infinity и NaN относятся к типу number, то есть
+  считаются за числа в языке JavaScript.
+   */
+</script>
+</body>
+</html>
