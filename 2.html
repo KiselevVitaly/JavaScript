@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=hv9nYmsLGWpYCZIV4gJrc8XaxoLD05_vN8TI4CBIaZuhJ7ievdrnuwrrHncIgePu3J5ibf37_CZgzr8NftylJeh38UrfbE5jMuzgNDpQEviJDMivHjH5ulQmsrAjywqi3ht8Me1M3x7oNwwNkUvVz19SDaFytW2fbPCpfWBPRHdeJMYRMrAmtyXrsNYNuqMvkUOpbTYge2ZeRD8byO9ivHy2CkJFS3hRCX69clzXCZ6-simkIQkpLqakNS-1fTN_b1z6RA33yiAOolRUZEgePBbh8ubfXSn13lHudKWCoHMzPw7wGFKmOv3VQyFd2Hq1ZsNWoSAzOgz3XRnZPR6IaNFMrbEwl1cUNZGtND9bc_zYlA27lUxIYCHWURxekfO3OWs_932n1LU74HoOdyUBDBJ0auWrHJP2_o9dDPZoAsJuVSGRtjMzlteKZJurC1jWVH2Lo8EJUb7xgs7TQ-TeAjVMAn9EyAAL2SyhFe0GvzHLU7VO394zv3rPzxKL0-R8_989tP_lpG3TrfCF1920Kl-4Pj3306g705VqZ64H2hfOdfVL3PuXpX5rA4Mf_FhQbRiacL0joAcvB2KVWZsZXVqpYRXg11oimUb4vldlXy4w3En-5Z0vLXE1z6zAWfyNiLUeL92yQL8xbLUdTL_RDWPMKCVP-gyYJp-9BKokwEF2B6WhTWVEFTbWiLIa2g9mqROQB9ZDmE-CPwGLQdT4j8rCr8TSWCkkupb6kiI4S-7aVEipTrzT_gYuZXQVN_EzugPEvgQM7-pNIXpKfQqA27EiSteecvNkhm8nGw6NrS6bTyjjh2BZNpsexm0ktN0DfXH4oW-K8xfay7hjU4sngNXs1RPyZi7YzmW7-CYl1txNLKF1syTA22WK0HYaPxNMOlaUNTBWtKD5pnNt1J_z58jQjsq2JvHOwjSgkEKoY8mo0tojpJBx176uiO15vKR_49gaUG0thFp5kxXNwqChWC339V50rfTXqxQgVNa9MFUEODzmQepPP-wJenXQZxyMSyp8drBlonraA7_8KJgfeNEhxrrujcrNw_WIlrBDMyxjwgOkmiJSJXtdhzZ6IVNA6cCs0sn1Bj7I8tfndul_aEaRlAgXuAu4npCcUNLZZb4" charset="UTF-8"></script></head>
+<body>
+<!--
+Обязательное задание.
+
+Необходимо из объекта, который лежит в константе post вывести значения, к
+которым приписан комментарий, в консоль.
+-->
+<script>
+  "use strict";
+
+  const post = {
+    author: "John", // вывести этот текст
+    postId: 23,
+    comments: [
+      {
+        userId: 10,
+        userName: "Alex",
+        text: "lorem ipsum",
+        rating: {
+          likes: 10,
+          dislikes: 2, // вывести это число
+        },
+      },
+      {
+        userId: 5, // вывести это число
+        userName: "Jane",
+        text: "lorem ipsum 2", // вывести этот текст
+        rating: {
+          likes: 3,
+          dislikes: 1,
+        },
+      },
+    ],
+  };
+
+  console.log(post.author);
+  console.log(post.comments[0].rating.dislikes);
+  console.log(post.comments[1].userId);
+  console.log(post.comments[1].text);
+</script>
+</body>
+</html>
