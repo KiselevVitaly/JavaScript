@@ -30,8 +30,52 @@
 -->
 <script>
   "use strict";
-
-  // Здесь пишем решение, данный комментарий необходимо стереть.
+  
+  /**
+   * Считает сумму переданных аргументов.
+   * @param {number} a  - Первое число.
+   * @param {number} b  - Второе число.
+   * @returns {number} Сумма чисел.
+   */   
+  function sum(a, b) {
+    return a + b;  
+  }
+  
+  /**
+   * Считает разницу переданных аргументов.
+   * @param {number} a  - Первое число.
+   * @param {number} b  - Второе число.
+   * @returns {number} Разница чисел.
+   */   
+  function diff(a, b) {
+    return Math.abs(a - b);
+  }
+  
+  /**
+   * Считает произведение переданных аргументов.
+   * @param {number} a  - Первое число.
+   * @param {number} b  - Второе число.
+   * @returns {number} Произведение чисел.
+   */   
+  function mul(a, b) {
+    return a * b;
+  }
+  
+  /**
+   * Считает частное переданных аргументов.
+   * @param {number} a  - Первое число.
+   * @param {number} b  - Второе число.
+   * @returns {number} Частное чисел.
+   */   
+  function div(a, b) {
+    return a / b;
+  }
+  
+  console.log(sum(2, 6));
+  console.log(diff(2, 6));
+  console.log(mul(2, 6));
+  console.log(div(2, 6));
+  
 </script>
 </body>
 </html>
