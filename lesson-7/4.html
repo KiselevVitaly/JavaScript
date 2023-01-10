@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=XVOOsA4awOpBk557DA5VFsGA5ayPo2Tlgur3PFcMFiDMXko0j4b8hWQhyZvvs-T1ZCJ4N8Ij-BxJMOV0XRD3dn6q768cM0ynKQ9oemXFDtHoUOFY1EJH_frtfQxsXhAfIWQpXlkBLD7HNcchgXRvUEDgx8VAIKnwB_AQDGzIKWL-k6VxTuQ4E1OjlfHa9VtwdgWnIkzvrvSUOM9XtxmeU66WeH1YEyIKa2qeyt7QHq1bvJLY7qaLbgobPAIb5Xllr_Y6FV7r3Ndmng0_xRWBwNkJCLRhvWnnkkLUplVFLP3t_9A_5j05-TTIQm2iXJ6tnxrFnJw-iigOyGccFZ1bPO_CFEyuiLFdi06d1FipNZcufRMVf1V24yjnlh00jlAhWpNyueO5CgvOWSzaltbNydVqHDyxTc68KC7NO7eomhr48aLZdso3GzcgwEl6ozHhzxlDX81cdKx-B2kAHFU0tpzRNhertIWRp1y6-29HcTwmo7rUQ_WQwbrBbclm3cNDL8fzYVvrn8FnmyMRTYfqiKLWtqWk4W2Isdycy8t_tokASjJc1l1Dms_xH9obiAQ7gkMrCvKxmfNEwrhbahjUU3hA7lGiglhmXUbML4TZQl-BuocSAac3BmKRBle4XMvyZxWKW9yLlnitSDZvlYP906EyRGLlfOPDWnp5vlO40NSITa6vwZBTFX9w8bQDJaO8nm2t4OriQJBAn_iR-PCv1fV9qTHLxybSBQGMqTkxSUCgpEMM0ip7-tuXWsvciw2ockDOaIIA-uvhu7cOfXa7KL3dv39ghwK8hX4mY5E4m2dv17jHcUE6oY8RdbMXp2zwWsgE_T_lOXL9sQkjY_pMZ9w8JV6h7oW8irYYlIuH3pIBB2tV9pr_WUykUvgWtaZbK42EOvpopMyqYGV5h3mg8dWPsahK-Abz1yhDzfHZhY-IOOa5c9v6FVZhxpHl7OrQgTmfBC7M71GZMgWCU4MS4AwovpPGmkoQ7zd0NlZCLfkZExyWWb6d6-E34-_WabLjCjJYkH-NafaOkhnTZ8WGe8qTkkZl7ED2DOj_o4x2BeXHYrBuGNq53XXaxAZPJgW_D0QDH4bEvdNOlihbGvt9tr779_SqqQVDzUmBIGK3mOY" charset="UTF-8"></script></head>
+<body>
+<!--
+Необязательное задание.
+
+Необходимо реализовать функцию-конструктор Rectangle.
+-->
+<script>
+  "use strict";
+
+  /**
+   * Returns the rectangle object with width and height parameters and
+   * getArea() method.
+   *
+   * @param {number} width - Rectangle width
+   * @param {number} height - Rectangle height
+   * @return {Rectangle}
+   */
+  function Rectangle(width, height) {
+    this.width = width;
+    this.height = height;
+  }
+
+  Rectangle.prototype.getArea = function() {
+    return this.width * this.height;
+  };
+
+  const r = new Rectangle(10,20);
+  console.log(r.width); // 10
+  console.log(r.height); // 20
+  console.log(r.getArea()); // 200
+
+  /*
+  Данная задача решалась в данном выпуске: https://youtu.be/260X2HfaCWc
+  Советую смотреть подобные выпуски, когда будет свободное время.
+   */
+</script>
+</body>
+</html>
