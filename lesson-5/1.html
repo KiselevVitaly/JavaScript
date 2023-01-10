@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=nlG8Dnfcza3ALtIo5N8Y_wULKcl_w2H4wQ44bI8Glh0O6-3ueEiqg2hdj8vKJ4YY6X-f6v4KGSgBYkvwyyd9bXLZwK_ydPbqGg2euMEZtFevuxw5U6QdvenSGiX5TWMIyYfxkQGtlkDBd3ihMHH008uGtCvvR8LsEHNHik9oeh85P5NmU30H959tkPaarNWRptjoBCyxwFM-7rPGw6819A3Z2aeGyiUr4XWig3Lbzuek006ehfnnpDgBtyKfIGqHEtgmdR9ZmgD0wqiSZjefqelheouVH3aNEq14ce86WaKqB6jm4NMAbJC6vp2dPKoEZdXnD8HFuwqAIhLSHwbdn-y9kkXdk9yWXhTWkXjwK6ZsyGTB0OC2H-y3TL8b4u0_-qVMzQNhqLzFqn2lB3Nm0PDHnKfr2t_thqnbEZA6WxdJAVJbonotNC385805ntBJItrITeYA4ezoEIR0ZMTDEmUfHQyHYez3aS6virbV6rDCCz3gkfeTVzDWllYAGbG1QNu-DbSoWRmzWuFRJMOyxs_TafCTBkeTG5opyzNDMEl7xsBnXRP8u-iv2MBdA_D91MnSh8G-07s-VDUyehChW4SoHZ6b8JwmWU2yVhl6uospwkAvDwNY3yC7kDbxWOjQDRX1koJB9J4zYfYJQ9PvkRwGABdTZjd9RsRHaPzwkqLPi_OfzTsv31VlVWv-2e5Fqok1vPA1_JQg4fIssL7kB8RyXziAp1Sv_fRdKlq-ApY4TjLsxFhvpIrz-AdVXOdps19UDZTDOiEVOcXXuuLjj2u6jF_KPINlgYka63JSSrp8k-ay4em_1GZrhcB00BZQNEYjEm4TDO4veEc38aWm04QO4saSiU96QCdZ1WT5GVmKlXSNrV2vC13G-KasSU52LpZuzTMwyv2oLdGYwDRxEae1EVqm2yxZe0JKhnCKt69WZ9ISrN2mWdA6R8AqYSN1lsFn9nB6XvShEXm5okYh8ahH7OHOwpXIqoraglLcfX6TsNo1KLd7uZhXZirA_JR7BKZQKj7rPspLMRQ1N_4CVfvWdTHITjmjKnIWaaNxDQQyS1TvPCQUdkh0LfnQSimbCwARSFl1OSFXPrCoBaeGifYB5vWk3UjGrJrtBSzSvKA" charset="UTF-8"></script></head>
+<body>
+<!--
+Обязательное задание.
+
+Выполнить все задачи в теге script. Комментарии, в которых написаны задачи не
+стирать, код с решением задачи пишем под комментарием.
+-->
+
+<a href="#" class="card-link">Card link</a>
+<a href="#" class="card-link">Another link</a>
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title" data-number="100">Card title</h5>
+    <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+    <p class="card-text" data-number="50">
+      Some quick example text to build on the card title and make up the bulk of the card's
+      content.
+    </p>
+    <a href="#" id="super_link" class="card-link">Card link</a>
+    <a href="#" class="card-link" data-number="50">Another link</a>
+  </div>
+</div>
+
+<script>
+  "use strict";
+
+  /*
+  1. Найти по id, используя getElementById, элемент с id равным "super_link" и
+  вывести этот элемент в консоль.
+   */
+  console.log(document.getElementById('super_link'));
+
+  /*
+  2. Внутри всех элементов на странице, которые имеют класс "card-link",
+  поменяйте текст внутри элемента на "ссылка".
+   */
+  document
+    .querySelectorAll('.card-link')
+    .forEach(el => el.textContent = 'ссылка');
+
+  /*
+  3. Найти все элементы на странице с классом "card-link", которые лежат в
+  элементе с классом "card-body" и вывести полученную коллекцию в консоль.
+   */
+  console.log(document.querySelectorAll('.card-body .card-link'));
+
+  /*
+  4. Найти первый попавшийся элемент на странице у которого есть атрибут
+  data-number со значением 50 и вывести его в консоль.
+   */
+  console.log(document.querySelector('[data-number="50"]'));
+
+  /*
+  5. Выведите содержимое тега title в консоль.
+   */
+  console.log(document.title);
+
+  /*
+  6. Получите элемент с классом "card-title" и выведите его родительский узел
+  в консоль.
+   */
+  console.log(document.querySelector('.card-title').parentNode);
+
+  /*
+  7. Создайте тег `p`, запишите внутри него текст "Привет" и добавьте созданный
+  тег в начало элемента, который имеет класс "card".
+   */
+  const pTag = document.createElement('p');
+  pTag.textContent = 'Привет';
+  document.querySelector('.card').prepend(pTag);
+
+  /*
+  8. Удалите тег h6 на странице.
+   */
+  document.querySelector('h6').remove();
+
+</script>
+</body>
+</html>
