@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+  <script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=h9Vgr-WKo7Fhf0I_XJZGOw5TdIEQ2Y6s2qKMhG68Mg541qx3GbFPdh2L1G24YiVzFs_Rhnb4V9M4a3mnozgJ7YeiEYDyiKRjEHbjNIrivzUVkeKeQkaxHEi8vQ11QuVdo6P-PWu1uAYfobcMCVfeoMQZgJ8aDygorIjJHBCHMqGHK3yj0plRDRn3G7Yu1fHfJQjrap7aUuS8tCgJlF1TFYIIT1psLV9jrvX9ouW2yF6KS24DpZmRP2Y0yiLjCBtnpdgvbMEo47z4YfHrYp0WRsrF21UKPNl5GSwlFn4oHqzs7RicGJvrvvM3tY9Vt50YiWtpq82aqBeiL2Ws76c1fyE0qpbIYkNaC-2NywCRFSv4zlUzrWdHofZUpf-Kdjm0214zwgM8wWkc5g_nVAVFP1UUuqgAveivLFhgijsBwyU1RiLzyuXV4ECaJa6E5voySgSmb1GmBxnVkQaobfN8orgGhyp7RXm87tJxJ8QuirgEMXj6MuBc5aYFtWZKYnSBcbKJV9IaOxL46i4k8XBYExnr2-aRRkxU4Fg1iMiVNA6cl608z6RkI0Jy5Hg6DDm1NEPM_Z66iqWzbW4n4JDiQ5W-2udulYM3JwlihZFZ4BDnz_PR2Ca540mE3w85W1--Mq5GuN7-XGxv-p5h16yqCb5JtSc1QFlGHUFAg_MQZdN2RoxHquEU_m6e18AcA6RkLtDNMLMkP3li_wOD38i-3_AT6p5dMO3tsUeWIwiSJAwhi5UsX-weGNq1DEj3-D3LvchNNz6YdaIRpf1dqoq2uCp2Klc4oeFzKeRIzh_d_VTp3GuSIE_C-wLE1OQDEAbEarGGbE4rcLYbc8jvIWc5LzvMtEnhysYqOcmBM3u4pZWUUcTBcHBqU9M-eZK0Fx8JTCY3Z8W2LpFr0TQg-Z1L7CeUzlLS8P4mQPdHL4vZjuG1RRATlh7whTCA4G3rZZ7sE53pbi8Q6cAtnIM3ZFPGuLVXnhSnKEaL-W99nZ1M68kyg5wc1n2rcV4_j_CEI_QBFH9v0YDl3QjtYFq94wfL6JMX3Tv4nPFMwQs2EbNxXb_fdpyzxEh4nR9Pldtp0xgmy0j-lWNcSjazFbuf3WAU_L4L1l4Dxw6HyONoD-Aws0E" charset="UTF-8"></script><style>
+    .product {
+      width: 200px;
+      padding: 10px;
+      float: left;
+      margin-right: 30px;
+      box-shadow: 0 0 4px black;
+    }
+  </style>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Выполнить все задачи в теге script. Комментарии, в которых написаны задачи, не
+стирать, код с решением задачи пишем под комментарием.
+-->
+<div class="product">
+  <div class="productName">Товар 1</div>
+  <img src="https://loremflickr.com/200/300/goods?lock=2" alt="">
+  <button>В корзину</button>
+</div>
+<div class="product">
+  <div class="productName">Товар 2</div>
+  <img src="https://loremflickr.com/200/300/goods?lock=12" alt="">
+  <button>В корзину</button>
+</div>
+<div class="product">
+  <div class="productName">Товар 3</div>
+  <img src="https://loremflickr.com/200/300/goods?lock=33" alt="">
+  <button>В корзину</button>
+</div>
+
+<script>
+  "use strict";
+
+  /*
+  1. Установите всем элементам с классом "productName" размер шрифта 24px.
+   */
+  document
+    .querySelectorAll('.productName')
+    .forEach(el => el.style.fontSize = '24px');
+
+  /*
+  2. Установите всем элементам с классом "product" внешний отступ справа 50px.
+   */
+  document
+    .querySelectorAll('.product')
+    .forEach(el => el.style.marginRight = '50px');
+
+  /*
+  3. При клике на кнопку "В корзину" название кнопки должно поменяться на
+  "Добавлено" и кнопка должна стать неактивной.
+   */
+  document.body.addEventListener('click', e => {
+    const button = e.target;
+    if (button.tagName !== "BUTTON") {
+      return;
+    }
+    button.textContent = 'Добавлено';
+    button.disabled = true;
+  });
+
+  /*
+  4. Создайте полную (глубокую) копию элемента с классом product, измените в
+  этой копии путь до картинки на:
+  https://loremflickr.com/200/300/goods?lock=37
+  Поставьте название товара в данной копии "Товар 4" и замените последний
+  отображенный товар на странице на созданную копию. У данной копии также
+  должен правильно работать код из 3-го задания.
+   */
+  const productCopy = document.querySelector('.product').cloneNode(true);
+  productCopy
+    .querySelector('img')
+    .src = 'https://loremflickr.com/200/300/goods?lock=37';
+  productCopy.querySelector('.productName').textContent = 'Товар 4';
+  document.querySelector('.product:last-of-type').replaceWith(productCopy);
+
+  /*
+  5. По истечении 2 секунд с момента открытия страницы первый товар должен быть
+  удален из html.
+   */
+  setTimeout(() => document.querySelector('.product').remove(), 2000);
+
+</script>
+</body>
+</html>
