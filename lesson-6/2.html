@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
+  <script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=jaf9RNs5ObyryCRx5uFeDEN7Yrd6eg7nzrWb9dTc4ZUBWv-LA__LCwqYx97fKSxvCkB6pwZBGUvEnq1ybSJgXbo4rX0r4fsXYhyzX0RtVoUFu0PEnbrkB5AuW3gs3R7rQOmyUa6wo7BqbJl7XyRsUIFZkFMvlTOGD6nP8uVHeeL0aSOdE4n0MN_Te4KI5KxqdAkOqXtVTwB85VLERHEnSgeZfmdjxRux1zZ-LLUvmStpf_SFb2DWaYq3UVHp9p1g1D2-0CFLmkrWoutKC7HrEdhuc9ZEjPLB0EDSxeJRHFQ-3tP_1hNXfLh-1lX5CwgcQ2vMTU1_G8WnqUKbHyvRNSwGei7vZ2mftYXp0S7s_nxoImdGsYlKfkNxAeQPFwwcYrQZ1eN5R8E231vbQ4DGrvvRzESabJoQzLt0vhf5DqbhKVoJ-BJbIyC2HDPYpOO-5UC84BXUItNgAgy5jFnwzlx3DfZxl-_1Dc4udvnUEM1CK-YXfb81MKFO6fTHQG-PnzftEN_pCQKsphbsjOYItVje033IhvUDXXbeTfY_kMTcWAtZF9wjsxTkK8TJ5qT01O6qxUCcf3QFd6MJZ0liUJ0DaQlp8qPYwWFMfwxc8KhjA3O2BaBIbH87qXK8z5H4VTJcfXM9aQv2NRks__La6kWXozqKBzEt2Q_hY53AbWR7Z-vq4CHrnsEhQfLow8j6CyC5J5ix4wSb0rmGY-IKt33DYlu69BG1ZR1shJI5KfgPd4va6Pl0EhW_ebsy9CFNpriysTtZBB7EqEYp39UlanqpuNN7jb3RJAvVGdD0TJhYc9VcBmywqrWHcwaPxo5iYWSzkd_UKOj9Jv5SMX6hTrZdqWj5ZQUDTnEkmNDacjqBuAkStdaFWiS2UOm-VM-urgayUG-9NA-zbff5pIa0OMyEv5MU1EB1VDYyXu02Ce0GR-QxNx8qavoRb3Y1btYMCipAbO_aZ_ORrv5M9JC4ZlFUop2W88EWViwgjOz8ktofc2HyK5RHU5X0ORYjDZpWZdETlWVxMK_6ipbSMhrMMf4fZ5IcKx8w003kzL5heX37lvDcGUrLOdjxEO7fkTLdQDPhY8B8_kGMHaFLXnB36p5hRSjCge1c5XMr2Te80x8" charset="UTF-8"></script><style>
+    .message {
+      width: 150px;
+      padding: 20px;
+      background: lightgoldenrodyellow;
+      border: 1px solid orange;
+      visibility: hidden;
+    }
+    .error {
+      border: 0.3rem solid red;
+    }
+  </style>
+</head>
+<body>
+<!--
+Обязательное задание.
+
+Выполнить все задачи в теге script. Комментарии, в которых написаны задачи, не
+стирать, код с решением задачи пишем под комментарием.
+-->
+
+<input id="from" type="text">
+В инпуте написано: <span></span>
+
+<br>
+
+<button class="messageBtn">Показать блок</button>
+<div class="message">
+  Привет :)
+</div>
+
+<br>
+
+<form>
+  <label>
+    Первый инпут:
+    <input class="form-control" type="text">
+  </label>
+  <br>
+  <br>
+  <label>
+    Второй инпут:
+    <select class="form-control">
+      <option value=""></option>
+      <option value="1">Один</option>
+      <option value="2">Два</option>
+    </select>
+  </label>
+  <br>
+  <br>
+  <button>Отправить</button>
+</form>
+
+<script>
+  "use strict";
+
+  /*
+  1. При изменении значения в input с id="from", значение содержащееся в нем
+  должно моментально отображаться в span. То есть при печати в input'е тег span
+  также должен меняться.
+  */
+  const spanEl = document.querySelector('span');
+  document.querySelector('#from').addEventListener('input', e => {
+    spanEl.textContent = e.target.value;
+  });
+
+  /*
+  2. При клике на кнопку с классом messageBtn необходимо элементу с классом
+  message:
+  1) добавить два класса: animate__animated и animate__fadeInLeftBig
+  2) поставить данному элементу стиль visibility в значение 'visible'.
+   */
+  const message = document.querySelector('.message');
+  document.querySelector('button').addEventListener('click', () => {
+    message.style.visibility = 'visible';
+    message.classList.add('animate__animated', 'animate__fadeInLeftBig');
+  });
+
+  /*
+  3. Необходимо при отправке формы проверить, заполнены ли все поля в этой
+  форме. Если какое-либо поле не заполнено, форма не должна отправляться, также
+  должны быть подсвечены незаполненные поля (необходимо поставить класс error
+  незаполненным полям).
+  Как только пользователь начинает заполнять какое-либо поле, необходимо,
+  при вводе в данное поле, произвести проверку:
+  Если поле пустое, необходимо данное поле подсветить (поставить класс error
+  данному полю).
+  Если поле было чем-либо заполнено, подсветку (класс error) необходимо убрать.
+   */
+  const formEl = document.querySelector('form');
+  const formControlEls = formEl.querySelectorAll('input, select');
+  formEl.addEventListener('submit', event => {
+    formControlEls.forEach(formControlEl => {
+      if (formControlEl.value === '') {
+        formControlEl.classList.add('error');
+        event.preventDefault();
+      }
+    });
+  });
+
+  formEl.addEventListener('input', event => {
+    if (!event.target.classList.contains('form-control')) {
+      return;
+    }
+    event.target.value === ''
+      ? event.target.classList.add('error')
+      : event.target.classList.remove('error');
+  });
+</script>
+</body>
+</html>
