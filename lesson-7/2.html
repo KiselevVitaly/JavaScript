@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=UgKXgxhuTPsEbJxXelk5QarY-lgIB_XzPtiBWXFJG7C3z_LTvGs5bFSjHUYaAnNxONWSaa3fxwe14BmCX7XsLT4xhz4CtV0VsowgklnVOSEqXX0GH9BicDJOVNdJ6JtYJ27Z4GfJTdrI7sB346CyR2AdOo2ylJlsqEy4P8Ws-eCD_vwBUBKo28x1TGhD8QIPFngQezRW_DlZMI9ri30QLMjY8PUzecttsgkeX9Tj5xUKEwb46welfXXgBGkjkHtJlG8nbG0g-pLy1YmcH7zT703gjOIdTND0BGpMKii16bddL_dqeSvG7z6iRN0yRG2jxNHpf0RCWcLwwVo-M-8OYWhQEzLJTf0AY_qtiAsQ7MKyPsOCVdxCk5NhTmSLtyXAuG5W70cGt2I-OxDrOC5DBCpnXDjoJTKXJQdyxi-QnN174RHbG6jh72AvqlMW9_GemKCzMZFRBndPsKdKxCVWhpDyigGReffAdknAIAfTpU-UmkWojB-elJ61HLWIZIbE07Id1aSmNB7csDA3MsZ9UXq7aRLq1cWY2Sm8teYDEjZDqs5ALpsaNALAJDCju6hEcSF9-cbW5NzFLrrJJYNIMUYux-uBdetTyTgzJFgGTgq0KRVWuBBc4CZc5LyNz8V-r4Gpw2ufkrbPsQtmq4sJ8TiJtzjMDLH2JalV3HIAbs0vMJojltKSSxlaiuwRI02omUgQiYX1AcR_np9nia9bXeL3PbubC333F4XsxWwtrQJ47G1X-JQK2c7M8PLy7MhbbbMuMSVTQhXD3Dzjzp1jf1RnzEVNBOTpGwcP1doPYBmxZSO8vaeTmeh-sDO9t85QVXQbSE1qdgdIeLtMr09LE7EHxXUgf1MsiI8PbWVnZ2tdxKYsElioEeqRFfybN4tECgTi3ZB_dJB7jk1Tfjf8bu2wIP2QsiFqUjwaj36xB0XKJ3UrUvbHUN_AC64m7dYMEixIBjfaW0ZvcL-QafLT7k2Oa_VZ2EQRBPSa4jVIcyRJXRymBojTvno93JOrl5BJtSrFJuHOTSoQKoMeYrabkdQ7Yuk7PROlLpluGmxxxQnYksasp4FMQgfWYKA9CbtIYJnERtiWCaAhh5EwOfpl9i_MStdXuwJtyVq68r2Cfjw" charset="UTF-8"></script><style>
+    .products {
+      overflow: hidden;
+      margin-top: 40px;
+    }
+
+    .product {
+      float: left;
+      margin-right: 20px;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <button class="menuButton" data-type="phones">Показать смартфоны</button>
+  <button class="menuButton" data-type="tablets">Показать планшеты</button>
+  <button class="menuButton" data-type="tv">Показать телевизоры</button>
+</header>
+
+<div class="products"></div>
+
+<script>
+  "use strict";
+
+  /*
+  1. Программист Паша уволился с работы и не закончил задачу.
+  Задача состояла в том, чтобы при клике на какую-либо кнопку в теге header
+  выводить продукты в div с классом products.
+  Продукты, которые надо вывести, валидны и прописаны в объекте products.
+  Однако, Паша явно сделал много ошибок в других кусках кода, вам необходимо
+  исправить все ошибки и внимательно проверить чтоб код работал правильно и
+  ничего лишнего не выводилось в div с классом products.
+  */
+
+  class Product {
+    constructor(id, name, price, imageUrl) {
+      this.id = id;
+      this.name = name;
+      this.price = price;
+      this.imageUrl = imageUrl;
+    }
+
+    /**
+     * @returns {string} html-разметка для товара
+     */
+    getProductMarkup() {
+      return `
+        <div class="product">
+            <div>${this.name}</div>
+            <img src="${this.imageUrl}" alt="">
+            <div>Цена: <span>${this.price}</span> р.</div>
+            <a href="https://example.com/producs/${this.id}">Подробнее</a>
+        </div>
+      `;
+    }
+  }
+
+  const products = {
+    phones: [
+      new Product(1, "Смартфон 1", "2533", "https://loremflickr.com/200/300/goods?lock=31"),
+      new Product(2, "Смартфон 2", "3123", "https://loremflickr.com/200/300/goods?lock=32"),
+      new Product(3, "Смартфон 3", "6123", "https://loremflickr.com/200/300/goods?lock=33"),
+    ],
+    tablets: [
+      new Product(4, "Плашнет 1", "5239", "https://loremflickr.com/200/300/goods?lock=34"),
+      new Product(5, "Плашнет 2", "6483", "https://loremflickr.com/200/300/goods?lock=35"),
+    ],
+    tv: [
+      new Product(6, "Телевизор 1", "4314", "https://loremflickr.com/200/300/goods?lock=36"),
+      new Product(7, "Телевизор 2", "5412", "https://loremflickr.com/200/300/goods?lock=37"),
+      new Product(8, "Телевизор 3", "3577", "https://loremflickr.com/200/300/goods?lock=38"),
+      new Product(9, "Телевизор 4", "8714", "https://loremflickr.com/200/300/goods?lock=39"),
+    ],
+  };
+
+  const productsEl = document.querySelector('.products');
+  document.querySelector('header').addEventListener('click', event => {
+    if (!event.target.classList.contains('menuButton')) {
+      return;
+    }
+    productsEl.innerHTML = products[event.target.dataset.type]
+      .map(product => product.getProductMarkup()).join("");
+  });
+
+</script>
+</body>
+</html>

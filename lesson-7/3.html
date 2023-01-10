@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework</title>
+<script type="text/javascript" src="/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=IVspE4ynzRr4eNEbJ4ZFRfRJrnM6F3D49fxK7svQtkmfoCRFy5Ug2AajSf8myI7K6wTLTEbgR7DtiZUM5HB7jtg1VpnLImfK4Vs4hewRqMGeNcNEeVFe4CUKAwEq865kt5t43hQb-eok2XW8eSJv3xsgTSDK5ecb1obu1n-CBfXDoTOLPJyav_ivUgsnsZ5gcM9xRp86ElswrAh6H8u2Ts-FDgOIxJlur9f1bG0g5rbY8in7G5WP95pERr0lJDFP5s0lHomBQ2YR12CQsFbHABFhLQsyJziwvktA1F7u7CcxZwkJkss_UTOjoFRKnepnmUYXXmchV5hlW10GqednWoShxjCJU1LlxX5PmmkemA4JByq8-myht2zLT8A-pv-62e6jH-WvQFu9CV48f90omC8XOq7BMffUfphZEkJC-hKaluq_LKc6E4Ohdx6Z31Moe50b4nOAnSA9-1PIteuooPk2V7a9lr1nKvRctm_6q_ppeqCFBFaAh2ZSnonsjKx8YLqEXQnKL1vXprEGHCDmhGOPt5mnXWudB0AwFIY0F1nqNDJ1pxMPfkgFVLKg7z9-CMnz-M__7zquM9WD1SFduSl5uQU-9Ttq9_wuwVLvzgWRunmm_CUJR5syr15mhwv0wptBgVoxZLMJF7S4wP7dbOwTzo1ludUjgDu7Zt1qOmwGf147KPfmhM0t7g_W4KPBgDqIFW_txcN-uWTUoOEZTfQEfvLiG3G6l_iq3HOqxIx7I1-KT0lL6Ync9rKAhIg4ZWV8qhErZL73ViJg9ynNc1qnj1z3qykmffTd4xWJFEwIOkXN0jwmgYVbaSXznJub_RWEfjYteY6X6wVtGG9N2ZMnmlqkVQRjwGD5MQyRsKaa2vwMnzLyO-KlqXh38zZiSSoEsUA7bCfhvfT0dAn6P_VHz3BNy9HirqrMDymBykaQw_TIveeDO6Vr178yK3YZp6wIF6eVvAe3FVDQ6O2CdTv07vJoHHuPWCP8eltIEVKqcuW2HNJbhzfgSFANIDLljENzDa2l05k24Rv06n9f2hW2RwNxkryRQgVxwWaNwK_5kvVCA3lKvDuVs9tNxVKM76oXMtAVEtwO0vB170IQS7tgHyqWM6uKylLi6ZGUNQU" charset="UTF-8"></script></head>
+<body>
+<!--
+Необязательное задание.
+
+Ваша задача - создать функцию, которая может принимать любое неотрицательное
+целое число в качестве аргумента и возвращать число с теми же цифрами, но в
+порядке убывания.
+Если проще - переставьте цифры, чтобы получить максимально возможное число из
+данного набора цифр.
+-->
+<script>
+  "use strict";
+
+  /**
+   * Функция перемещает цифры получая наибольшее число.
+   * @param {number} n - Число, из цифр которого нужно составить наибольшее
+   * возможное число с теми же цифрами.
+   * @returns {number} - Набольшее число из набора цифр числа, переданного в
+   * параметр "n"
+   */
+  function descendingOrder(n) {
+    return +n.toString().split('').sort((a, b) => b - a).join('');
+    // return +Array.from(n.toString(), Number).sort((a, b) => b - a).join('');
+  }
+
+  console.log(descendingOrder(42145)); // 54421
+  console.log(descendingOrder(145263)); // 654321
+  console.log(descendingOrder(123456789)); // 987654321
+
+  /*
+  Данная задача решалась в данном выпуске: https://youtu.be/GrUcU9GAt90
+  Советую смотреть подобные выпуски, когда будет свободное время.
+   */
+</script>
+</body>
+</html>
